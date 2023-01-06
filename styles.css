@@ -1,0 +1,178 @@
+html, 
+body {
+  background-color: rgba(13, 25, 44, 1);
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  align-items: center;
+  background-color: rgba(21, 38, 63, 1);
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.0952917);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 543px;
+  width: 327px;
+}
+
+.card-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img {
+  border-radius: 8px;
+  height: 278px;
+  width: 278px;
+  margin-top: 25px;
+  transition: opacity 0.5s;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.card-img:hover {
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.card-img:hover + .card-img-background {
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.card-img:hover ~ .card-img-background {
+  z-index: 1;
+}
+
+.card-img-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 25px;
+  position: absolute;
+  background-color: rgba(0, 255, 248, 1);
+  height: 278px;
+  width: 278px;
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: -1;
+  transition: opacity 0.5s;
+}
+
+.card-preview-img {
+  z-index: 1;
+  position: absolute;
+  margin-top: 25px;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  width: 278px;
+}
+
+.title {
+  color: rgba(255, 255, 255, 1);
+  margin: 25px 0px 0px 0px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
+.title:hover {
+  color: rgba(0, 255, 248, 1);
+}
+
+.description {
+  color: rgba(139, 172, 217, 1);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 0;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stats-icon {
+  margin-right: 8px;
+}
+
+.price {
+  display: flex;
+  color: rgba(0, 255, 248, 1);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.time {
+  display: flex;
+  color: rgba(139, 172, 217, 1);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: 5px;
+  border-style: solid;
+  border-color: rgba(46, 64, 90, 1);
+  border-width: 1px;
+  border-top: 0;
+  width: 100%;
+}
+
+.card-author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-author p {
+  color: rgba(139, 172, 217, 1);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15p;
+}
+
+.author-img {
+  border-radius: calc(33px / 2);
+  box-sizing: border-box;
+  border: 1px solid #FFFFFF;
+  margin-right: 15px;
+  height: 33px;
+  width: 33px;
+}
+
+.author {
+  color: rgba(255, 255, 255, 1);
+  transition: color 0.5s;
+  cursor: pointer;
+}
+
+.author:hover {
+  color: rgba(0, 255, 248, 1);
+}
